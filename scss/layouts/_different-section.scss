@@ -1,0 +1,74 @@
+@use "../utils/variables";
+.different-section {
+  position: relative;
+  &__right-img {
+    display: none;
+    @media screen and (min-width: variables.$bp-desktop) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 10;
+      display: block;
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    color: variables.$color-one;
+    margin: 16px 0 32px 0;
+    font-size: clamp(16px, calc(7.75px + 1.114vw), 20px);
+  }
+
+  &__container {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    @media screen and (min-width: variables.$bp-desktop) {
+      justify-content: space-between;
+      gap: 0;
+    }
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: variables.$color-two;
+    border: 1px solid variables.$color-seven;
+    padding: 36px 45px;
+  }
+
+  &__card-title {
+    font-size: clamp(20px, 2.28vw, 28px);
+    font-weight: 700;
+    color: variables.$color-fife;
+    margin: 25px 0 8px 0;
+  }
+
+  &__card-subtitle {
+    max-width: 177px;
+    width: 100%;
+    color: variables.$color-one;
+    text-align: center;
+    font-size: clamp(16px, calc(7.75px + 1.114vw), 20px);
+  }
+
+  &__text {
+    font-size: clamp(16px, calc(7.75px + 1.114vw), 20px);
+    color: variables.$color-one;
+    text-align: center;
+    margin: 32px 0 24px 0;
+  }
+
+  &__text-accept {
+    font-size: 30px;
+    font-weight: 700;
+    color: variables.$color-fife;
+  }
+  &__join-us {
+    padding: 14px clamp(24px, 3.34vw, 41px);
+    font-size: clamp(12px, calc(12.04px + 0.3075vw), 16px);
+  }
+}

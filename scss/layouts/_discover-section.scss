@@ -1,0 +1,63 @@
+@use "../utils/variables";
+.discover-section {
+  padding-top: 30px;
+  position: relative;
+  padding-bottom: 30px;
+    @media screen and (min-width: variables.$bp-tablet) {
+  padding-bottom: 242px;
+  padding-top: 82px;
+    }
+
+
+  &__blast-left {
+    display: none;
+    @media screen and (min-width: variables.$bp-desktop) {
+      display: block;
+      position: absolute;
+      z-index: 10;
+      bottom: 0;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    @media screen and (min-width: variables.$bp-desktop) {
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0 auto;
+    @media screen and (min-width: variables.$bp-tablet) {
+      text-align: left;
+      margin-left: 0;
+    }
+  }
+  &__description {
+    max-width: 585px;
+    width: 100%;
+    line-height: 1.7;
+    font-size: clamp(12px, calc(7.75px + 1.114vw), 20px);
+    text-align: center;
+    margin: 10px auto 25px;
+    @media screen and (min-width: variables.$bp-desktop) {
+      text-align: left;
+      margin-left: 0;
+    }
+  }
+
+  .discover-img {
+    display: none;
+    @media screen and (min-width: variables.$bp-tablet) {
+      display: block;
+    }
+  }
+  &__learn-more {
+    padding: clamp(10px, calc(5.58px + 0.577vw), 13px) clamp(10px, calc(-10.77px + 2.697vw), 24px);
+    font-size: clamp(12px, calc(12.04px + 0.3075vw), 16px);
+  }
+}

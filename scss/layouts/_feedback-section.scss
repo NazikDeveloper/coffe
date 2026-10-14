@@ -1,0 +1,100 @@
+@use "../utils/variables";
+.feedback-section {
+  position: relative;
+
+  &__blast-left {
+  display: none;
+    @media screen and (min-width: variables.$bp-desktop) {
+      display: block;
+        position: absolute;
+          left: 0;
+          bottom: 30px;
+          z-index: 10;
+    }
+  }
+
+  &__blast-right {
+    display: none;
+    @media screen and (min-width: variables.$bp-desktop) {
+      display: block;
+      position: absolute;
+        right: 0;
+        top: 30px;
+        z-index: 10;
+    }
+  }
+
+  &__subtitle {
+    color: variables.$color-one;
+    line-height: 1.7;
+    text-align: center;
+    margin: 10px 0 15px 0;
+    font-size: clamp(16px, calc(7.75px + 1.114vw), 20px);
+    @media screen and (min-width: variables.$bp-desktop) {
+    margin: 16px 0 45px 0;
+    }
+  }
+
+  &__section-slider {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__section-container {
+    overflow: hidden;
+  }
+
+  &__item {
+    border: 1px solid variables.$color-seven;
+    padding: 20px 20px 0 20px;
+    background-color: variables.$color-two;
+    @media screen and (min-width: variables.$bp-mobile) {
+    padding: 40px 40px 0 40px;
+    }
+    @media screen and (min-width: variables.$bp-tablet) {
+    padding: 60px 60px 0 60px;
+    }
+    @media screen and (min-width: variables.$bp-desktop) {
+    padding: 100px 100px 0 100px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__text {
+    font-size: clamp(14px, calc(7.75px + 1.114vw), 18px);
+    line-height: 2;
+    color: variables.$color-one;
+    max-width: 780px;
+    text-align: center;
+  }
+
+  &__card-title {
+    font-size: clamp(24px, calc(16px + 1.3vw), 32px);
+    font-weight: 700;
+    color: variables.$color-fife;
+    margin: 28px 0 4px 0;
+  }
+
+  &__card-subtitle {
+    color: variables.$color-one;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    font-size: clamp(16px, calc(7.75px + 1.114vw), 20px);
+  }
+
+  &__img {
+    width: 100px;
+      height: 100px;
+    display: block;
+    @media screen and (min-width: variables.$bp-desktop) {
+      width: 112px;
+      height: 112px;
+    }
+  }
+}

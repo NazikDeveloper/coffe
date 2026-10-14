@@ -1,0 +1,16 @@
+@use "../utils/variables";
+.section {
+  width: 100%;
+  padding: 41px 0;
+  &__title {
+    font-size: 28px;
+    font-weight: 700;
+    color: variables.$color-fife;
+    @media screen and (min-width: variables.$bp-mobile) {
+    font-size: 34px;
+    }
+    @media screen and (min-width: variables.$bp-tablet) {
+    font-size: 54px;
+    }
+  }
+}

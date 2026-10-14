@@ -1,0 +1,8 @@
+@use "../utils/variables";
+.centered {
+    text-align: center;
+}
+
+.other-color {
+    background-color: variables.$color-ten;
+}

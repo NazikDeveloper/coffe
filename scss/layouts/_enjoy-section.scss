@@ -1,0 +1,63 @@
+@use "../utils/variables";
+.enjoy-section {
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__subtitle {
+    color: variables.$color-one;
+    margin-bottom: 32px;
+    text-align: center;
+    font-size: clamp(16px, calc(7.75px + 1.114vw), 20px);
+  }
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    @media screen and (min-width: variables.$bp-desktop) {
+    justify-content: space-between;
+    gap: 0;
+    }
+  }
+
+  &__card {
+    height: 364px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: variables.$color-two;
+    border: 1px solid variables.$color-seven;
+    position: relative;
+  }
+
+  &__card-title {
+    color: variables.$color-fife;
+    font-size: clamp(20px, calc(7.75px + 1.114vw), 22px);
+    font-weight: 700;
+    margin: 12px 0 10px 0;
+  }
+
+  &__card-subtitle {
+    font-size: 16px;
+    color: variables.$color-six;
+    margin-bottom: 6px;
+  }
+
+  &__card-price {
+    display: block;
+    font-size: 18px;
+    color: variables.$color-fife;
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+  &__btn-enjoy {
+    position: absolute;
+    bottom: -24px;
+    padding: clamp(10px, calc(5.58px + 0.577vw), 13px) 
+    clamp(10px, calc(-10.77px + 2.697vw), 24px);
+    font-size: clamp(12px, calc(12.04px + 0.3075vw), 16px);
+  }
+}
